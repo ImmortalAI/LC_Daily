@@ -82,9 +82,16 @@ namespace LC_Daily.Problems._2025._2025_08._2025_08_18
             List<int> cards = [];
             while (true)
             {
+                Console.WriteLine("---------------- 679 ----------------");
                 Console.WriteLine("Введите 4 числа через запятую (от 1 до 9)");
 
                 if (Console.ReadLine() is not string input) continue;
+
+                if (input == "exit")
+                {
+                    Console.WriteLine("---------------- end ----------------\n");
+                    return;
+                }
 
                 bool failed = false;
                 foreach (var item in input.Split(","))
@@ -97,9 +104,16 @@ namespace LC_Daily.Problems._2025._2025_08._2025_08_18
 
                     cards.Add(num);
                 }
-                if (failed || cards.Count != 4) continue;
 
-                JudgePoint24([.. cards]);
+                if (failed || cards.Count != 4)
+                {
+                    Console.WriteLine("Ошибка ввода, повторите попытку или выйдите из меню через exit");
+                    Console.WriteLine("---------------- end ----------------\n");
+                    continue;
+                }
+
+                Console.WriteLine($"Result: {JudgePoint24([.. cards])}");
+                Console.WriteLine("---------------- end ----------------\n");
             }
         }
     }
