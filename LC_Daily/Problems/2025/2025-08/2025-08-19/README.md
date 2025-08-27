@@ -1,4 +1,4 @@
-# Daily Problem No. 679
+# Daily Problem No. 2348
 
 [Problem URL](https://leetcode.com/problems/number-of-zero-filled-subarrays/?envType=daily-question&envId=2025-08-19)
 
