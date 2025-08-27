@@ -5,7 +5,7 @@ VisualStudioVersion = 17.14.36414.22
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LC_Daily", "LC_Daily\LC_Daily.csproj", "{1D99405B-01BA-410D-B35B-1D8C6F946BFC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProblemSourceGenerator", "ProblemSourceGenerator\ProblemSourceGenerator\ProblemSourceGenerator.csproj", "{D395CDDC-7B87-4075-986B-1C8E332DDCFC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProblemSourceGenerator", "ProblemSourceGenerator\ProblemSourceGenerator.csproj", "{D395CDDC-7B87-4075-986B-1C8E332DDCFC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LC_Daily_Tests", "LC_Daily_Tests\LC_Daily_Tests.csproj", "{9DA0FA71-00FF-463E-AE73-65B71416ABD8}"
 EndProject
