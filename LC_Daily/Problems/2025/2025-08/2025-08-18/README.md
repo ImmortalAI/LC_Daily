@@ -1,5 +1,7 @@
 # Daily Problem No. 679
 
+[Problem URL](https://leetcode.com/problems/24-game/?envType=daily-question&envId=2025-08-18)
+
 ## Problem
 
 You are given an integer array `cards` of length `4`. You have four cards, each containing a number in the range `[1, 9]`. You should arrange the numbers on these cards in a mathematical expression using the operators `['+', '-', '*', '/']` and the parentheses `'('` and `')'` to get the value 24.

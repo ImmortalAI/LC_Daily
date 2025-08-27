@@ -29,5 +29,38 @@ namespace LC_Daily_Tests._2025._2025_08._2025_08_18
 
             Assert.False(result);
         }
+
+        /// <summary>
+        /// (3 + 3) / (1 / 4)
+        /// </summary>
+        [Fact]
+        public void DivisionExample()
+        {
+            var problem = new Problem_24_Game();
+
+            var result = problem.JudgePoint24([3, 3, 1, 4]);
+
+            Assert.True(result);
+        }
+
+        [Fact]
+        public void TestCase66()
+        {
+            var problem = new Problem_24_Game();
+
+            var result = problem.JudgePoint24([1, 5, 9, 1]);
+
+            Assert.False(result);
+        }
+
+        [Fact]
+        public void TestCase70()
+        {
+            var problem = new Problem_24_Game();
+
+            var result = problem.JudgePoint24([3, 3, 8, 8]);
+
+            Assert.True(result);
+        }
     }
 }
