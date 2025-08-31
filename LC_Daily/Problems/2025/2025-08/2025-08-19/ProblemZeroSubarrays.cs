@@ -3,11 +3,11 @@
 namespace LC_Daily.Problems._2025._2025_08._2025_08_19
 {
     [Problem("2025-08-19")]
-    public class Problem_Zero_Subarrays : IProblem
+    public class ProblemZeroSubarrays : IProblem
     {
         public long ZeroFilledSubarray(int[] nums)
         {
-            int State = 0;
+            int state = 0;
             long result = 0;
             nums = nums.Append(1).ToArray();
 
@@ -16,11 +16,11 @@ namespace LC_Daily.Problems._2025._2025_08._2025_08_19
                 switch (nums[i])
                 {
                     case 0:
-                        State++;
+                        state++;
                         break;
                     default:
-                        result += ArithmeticSum(State);
-                        State = 0;
+                        result += ArithmeticSum(state);
+                        state = 0;
                         break;
                 }
             }

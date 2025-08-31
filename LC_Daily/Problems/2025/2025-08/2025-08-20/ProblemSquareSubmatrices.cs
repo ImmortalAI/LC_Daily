@@ -3,7 +3,7 @@
 namespace LC_Daily.Problems._2025._2025_08._2025_08_20
 {
     [Problem("2025-08-20")]
-    public class Problem_Square_Submatrices : IProblem
+    public class ProblemSquareSubmatrices : IProblem
     {
         public int CountSquares(int[][] matrix)
         {
