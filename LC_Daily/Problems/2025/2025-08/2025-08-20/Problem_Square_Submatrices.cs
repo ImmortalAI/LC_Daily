@@ -7,33 +7,55 @@ namespace LC_Daily.Problems._2025._2025_08._2025_08_20
     {
         public int CountSquares(int[][] matrix)
         {
-            int n = matrix.Length;
-            int m = matrix[0].Length;
-            var transposed = TransposeMatrix(matrix);
+            var n = matrix.Length;
+            var m = matrix[0].Length;
 
-            for(int i = 0; i < n; i++)
+            var incrementor = new int[n][];
+            for (int r = 0; r < n; r++)
             {
-                for(int j = 0;  j < m; j++)
-                {
+                incrementor[r] = new int[m];
+            }
 
+            incrementor[0][0] = matrix[0][0];
+            for (int i = 1; i < n; i++)
+            {
+                incrementor[i][0] = matrix[i][0];
+            }
+            for (int j = 1; j < m; j++)
+            {
+                incrementor[0][j] = matrix[0][j];
+            }
+
+            for (int i = 1; i < n; i++)
+            {
+                for (int j = 1; j < m; j++)
+                {
+                    if (matrix[i][j] == 0)
+                    {
+                        incrementor[i][j] = 0;
+                        continue;
+                    }
+                    
+                    incrementor[i][j] = Math.Min(Math.Min(incrementor[i][j - 1], incrementor[i - 1][j]), 
+                        incrementor[i-1][j-1]) + 1;
                 }
             }
 
-            return 0;
+            return incrementor.Sum(x => x.Sum());
         }
 
         public int[][] TransposeMatrix(int[][] matrix)
         {
             if (matrix.Length == 0) return [];
 
-            int n = matrix.Length;
-            int m = matrix[0].Length;
+            var n = matrix.Length;
+            var m = matrix[0].Length;
 
-            int[][] newMatrix = new int[m][];
+            var newMatrix = new int[m][];
 
             for (int j = 0; j < m; j++)
             {
-                int[] row = new int[n];
+                var row = new int[n];
                 for (int i = 0; i < n; i++)
                 {
                     
@@ -71,7 +93,7 @@ namespace LC_Daily.Problems._2025._2025_08._2025_08_20
                     if (string.IsNullOrEmpty(input))
                         break;
 
-                    bool failed = false;
+                    var failed = false;
                     var parsed = input.Split(",").Select(x =>
                     {
                         if (int.TryParse(x, out int n))
