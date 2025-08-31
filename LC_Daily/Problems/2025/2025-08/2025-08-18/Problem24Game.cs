@@ -4,7 +4,7 @@ using System.Numerics;
 namespace LC_Daily.Problems._2025._2025_08._2025_08_18
 {
     [Problem("2025-08-18")]
-    public sealed class Problem_24_Game : IProblem
+    public sealed class Problem24Game : IProblem
     {
         public bool JudgePoint24(int[] cards)
         {

@@ -8,12 +8,12 @@ using Problems;
 
 namespace LC_Daily_Tests._2025._2025_08._2025_08_19
 {
-    public class Problem_Zero_Subarrays_Tests
+    public class ProblemZeroSubarraysTests
     {
         [Fact]
         public void Example1()
         {
-            var solver = new Problem_Zero_Subarrays();
+            var solver = new ProblemZeroSubarrays();
 
             var result = solver.ZeroFilledSubarray([1, 3, 0, 0, 2, 0, 0, 4]);
 
@@ -23,7 +23,7 @@ namespace LC_Daily_Tests._2025._2025_08._2025_08_19
         [Fact]
         public void Example2()
         {
-            var solver = new Problem_Zero_Subarrays();
+            var solver = new ProblemZeroSubarrays();
 
             var result = solver.ZeroFilledSubarray([0, 0, 0, 2, 0, 0]);
 
@@ -33,7 +33,7 @@ namespace LC_Daily_Tests._2025._2025_08._2025_08_19
         [Fact]
         public void Example3()
         {
-            var solver = new Problem_Zero_Subarrays();
+            var solver = new ProblemZeroSubarrays();
 
             var result = solver.ZeroFilledSubarray([2, 10, 2019]);
 
